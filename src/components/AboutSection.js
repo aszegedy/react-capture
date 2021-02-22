@@ -8,22 +8,6 @@ import { titleAnim, fade, photoAnim } from "../animation";
 import Wave from "./Wave";
 
 const AboutSection = () => {
-  /*  const titleAnim = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 2 } },
-  };
-  const container = {
-    hidden: { x: 100 },
-    show: {
-      x: 0,
-      transition: {
-        duration: 0.75,
-        ease: "easeOut",
-        staggerChildren: 1,
-      },
-    },
-  }; */
-
   return (
     <About>
       <Description>
@@ -47,7 +31,13 @@ const AboutSection = () => {
         <motion.button variants={fade}>Contact Us</motion.button>
       </Description>
       <Image>
-        <motion.img variants={photoAnim} src={home1} alt="guy with a camera" />
+        <motion.img
+          variants={photoAnim}
+          initial="hidden"
+          animate="show"
+          src={home1}
+          alt="guy with a camera"
+        />
       </Image>
       <Wave />
     </About>
